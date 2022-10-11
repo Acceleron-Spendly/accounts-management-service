@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.acceleron.spendly</groupId>
+		<artifactId>common-pom</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<artifactId>accounts-management</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<name>Spendly - Accounts management service</name>
+
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>api</module>
+		<module>core</module>
+		<module>controllers</module>
+		<module>persistence</module>
+		<module>bom</module>
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.acceleron.spendly.accounts</groupId>
+				<artifactId>bom</artifactId>
+				<version>${project.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<developers>
+		<developer>
+			<name>Max Kutsepalov</name>
+			<url>https://www.linkedin.com/in/max-kutsepalov</url>
+			<timezone>+2</timezone>
+			<roles>
+				<role>developer</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<scm>
+		<url>https://github.com/Acceleron-Inc/spendly-api</url>
+		<connection>git@github.com:Acceleron-Inc/spendly-api.git</connection>
+		<developerConnection>git@github.com:Acceleron-Inc/spendly-api.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+</project>
