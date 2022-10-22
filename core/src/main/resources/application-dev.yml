@@ -1,0 +1,23 @@
+spring:
+  main:
+    banner-mode: off
+  application:
+    name: 'accounts-management-service'
+  config:
+    import: 'optional:configserver:http://localhost:8888'
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: 'jdbc:h2:file:./database/spendly-db'
+    username: 'sa'
+  jpa:
+    database: h2
+    database-platform: 'org.hibernate.dialect.H2Dialect'
+    hibernate:
+      ddl-auto: create
+  liquibase:
+    enabled: false
+springdoc:
+    swagger-ui:
+      path: '/swagger'
+server:
+  port: 8100

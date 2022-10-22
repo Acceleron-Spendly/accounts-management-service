@@ -1,0 +1,3 @@
+DROP CONSTRAINT FK86400woagcwr1hfb55b8yiyx8;
+DROP CONSTRAINT FKckk7kosgilv2f2k5b5djrfvqy;
+DROP TABLE records;

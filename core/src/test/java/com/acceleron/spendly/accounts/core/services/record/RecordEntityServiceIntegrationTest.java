@@ -15,5 +15,7 @@ class RecordEntityServiceIntegrationTest {
 
     @Test
     void getRepository() {
+        //TODO: Test
+        assertNull(null);
     }
 }

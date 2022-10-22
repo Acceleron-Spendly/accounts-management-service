@@ -18,6 +18,12 @@
             <groupId>com.acceleron.spendly.accounts</groupId>
             <artifactId>persistence</artifactId>
         </dependency>
+        <!--TODO: Remove when new SpringBoot version will be released-->
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>1.33</version>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>

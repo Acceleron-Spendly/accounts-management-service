@@ -9,9 +9,15 @@ package com.acceleron.spendly.accounts;
 
 public class ControllersConstants {
 
+    private ControllersConstants() {
+
+    }
+
     public static final String ROOT = "/";
+
+    public static final String RECORDS = ROOT + "records";
     public static final String ACCOUNTS = ROOT + "accounts";
     public static final String CATEGORIES = ROOT + "categories";
-    public static final String RECORDS = ROOT + "records";
+
     public static final String ID = "/{id}";
 }

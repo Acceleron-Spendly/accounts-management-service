@@ -12,7 +12,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Currency;
+import java.math.BigDecimal;
 
 @Data
 @Builder
@@ -23,8 +23,8 @@ public class AccountDTO {
     private String id;
     private String name;
     private String type;
-    private String amount;
+    private BigDecimal amount;
     private String color;
-    private Currency currency;
+    private String currency;
     private String personId;
 }
