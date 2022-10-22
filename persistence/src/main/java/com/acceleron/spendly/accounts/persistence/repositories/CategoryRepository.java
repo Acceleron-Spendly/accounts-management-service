@@ -7,9 +7,7 @@ package com.acceleron.spendly.accounts.persistence.repositories;
  * All rights reserved.
  */
 
-import com.acceleron.spendly.accounts.persistence.dao.AccountEntity;
 import com.acceleron.spendly.accounts.persistence.dao.CategoryEntity;
-import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CategoryRepository extends BaseRepository<CategoryEntity> {
 

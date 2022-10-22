@@ -7,7 +7,6 @@ package com.acceleron.spendly.accounts.api.dto;
  * All rights reserved.
  */
 
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,8 +14,9 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.time.ZoneOffset;
-import java.util.Currency;
+
+import static java.time.LocalDateTime.now;
+import static java.time.ZoneOffset.UTC;
 
 @Data
 @Builder
@@ -32,10 +32,6 @@ public class RecordDTO {
     private String type;
     private CategoryDTO category;
     private AccountDTO account;
-    private Currency currency;
-    private LocalDateTime creationDateTime = now();
-
-    private LocalDateTime now() {
-        return LocalDateTime.now(ZoneOffset.UTC);
-    }
+    private String currency;
+    private LocalDateTime creationDateTime = now(UTC);
 }

@@ -8,12 +8,9 @@ package com.acceleron.spendly.accounts.persistence.dao;
  */
 
 import lombok.*;
-import org.springframework.lang.NonNull;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
-import java.util.Currency;
 
 @Table(name = RecordEntity.TABLE_NAME)
 @Entity
@@ -28,11 +25,10 @@ public class RecordEntity extends AbstractEntity {
     public static final String TABLE_NAME = "record";
     private static final String ID_PREFIX = "RCD";
 
-    @NonNull
+    @Column(nullable = false)
     private BigDecimal targetAmount;
-    @NonNull
-    private LocalDateTime createdTime;
-    @NonNull
+
+    @Column(nullable = false)
     private BigDecimal amount;
 
     private String note;
@@ -47,8 +43,8 @@ public class RecordEntity extends AbstractEntity {
     @JoinColumn(name = "account_id", nullable = false)
     private AccountEntity account;
 
-    @NonNull
-    private Currency currency;
+    @Column(nullable = false)
+    private String currency;
 
     @Override
     public String prefix() {

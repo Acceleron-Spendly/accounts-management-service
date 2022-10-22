@@ -11,7 +11,7 @@ import lombok.*;
 
 import javax.persistence.*;
 
-import java.util.Currency;
+import java.math.BigDecimal;
 
 import static com.acceleron.spendly.accounts.persistence.dao.AccountEntity.*;
 
@@ -28,17 +28,22 @@ public class AccountEntity extends AbstractEntity {
     public static final String TABLE_NAME = "account";
     private static final String ID_PREFIX = "ACC";
 
-    @NonNull
+    @Column(nullable = false)
     private String name;
-    @NonNull
+
+    @Column(nullable = false)
     private String type;
-    @NonNull
-    private String amount;
-    @NonNull
+
+    @Column(nullable = false)
+    private BigDecimal amount;
+
+    @Column(nullable = false)
     private String color;
-    @NonNull
-    private Currency currency;
-    @NonNull
+
+    @Column(nullable = false)
+    private String currency;
+
+    @Column(nullable = false)
     private String personId;
 
     @Override

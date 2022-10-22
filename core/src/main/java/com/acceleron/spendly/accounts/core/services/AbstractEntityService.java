@@ -37,8 +37,8 @@ public abstract class AbstractEntityService<T extends AbstractEntity> implements
     @Override
     public T update(T entity) {
         T updatedEntity = null;
-        if (nonNull(entity.getId())) {
-            updatedEntity = getRepository().save(entity);//TODO fix update
+        if (nonNull(entity.getId())) { //TODO fix update logic
+            updatedEntity = getRepository().save(entity);
         }
         return updatedEntity;
     }

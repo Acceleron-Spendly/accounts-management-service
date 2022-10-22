@@ -1,0 +1,16 @@
+CREATE TABLE record (
+    id STRING(255) NOT NULL,
+    creation_date_time TIMESTAMP,
+    deletion_date_time TIMESTAMP,
+    logically_deleted BOOL NOT NULL,
+    amount NUMERIC,
+    currency STRING(255),
+    note STRING(255),
+    payee STRING(255),
+    target_amount NUMERIC,
+    type STRING(255),
+    account_id STRING(255) NOT NULL,
+    category_id STRING(255) NOT NULL,
+    CONSTRAINT FK_CATEGORY_ID FOREIGN KEY(category_id) REFERENCES category(id),
+    CONSTRAINT FK_ACCOUNT_ID FOREIGN KEY(account_id) REFERENCES account(id),
+) PRIMARY KEY(id);

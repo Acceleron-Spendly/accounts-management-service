@@ -15,5 +15,7 @@ class AccountEntityServiceIntegrationTest {
 
     @Test
     void getRepository() {
+        //TODO: Test
+        assertNull(null);
     }
 }

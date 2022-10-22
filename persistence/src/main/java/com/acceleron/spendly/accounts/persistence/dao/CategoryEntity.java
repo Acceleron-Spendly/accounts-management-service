@@ -9,7 +9,6 @@ package com.acceleron.spendly.accounts.persistence.dao;
 
 import lombok.*;
 
-import org.springframework.lang.NonNull;
 
 import javax.persistence.*;
 import java.util.List;
@@ -31,9 +30,10 @@ public class CategoryEntity extends AbstractEntity {
 
     public static final String TABLE_NAME = "category";
     public static final int MAX_CATEGORY_LEVEL = 3;
+
     private static final String ID_PREFIX = "CTG";
 
-    @NonNull
+    @Column(nullable = false)
     private String name;
     private String color;
     private int categoryLevel;
@@ -41,7 +41,7 @@ public class CategoryEntity extends AbstractEntity {
     @Column(name = "parent_category_id", insertable = false, updatable = false)
     private String parentCategoryId;
 
-    @NonNull
+    @Column(nullable = false)
     private String personId;
 
     @OneToMany(fetch = EAGER, cascade = PERSIST)
