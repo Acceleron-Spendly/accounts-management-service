@@ -25,7 +25,6 @@ import static javax.persistence.FetchType.EAGER;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-@RequiredArgsConstructor
 public class CategoryEntity extends AbstractEntity {
 
     public static final String TABLE_NAME = "category";
@@ -44,6 +43,7 @@ public class CategoryEntity extends AbstractEntity {
     @Column(nullable = false)
     private String personId;
 
+    @Builder.Default
     @OneToMany(fetch = EAGER, cascade = PERSIST)
     @JoinColumn(name="parent_category_id")
     private List<CategoryEntity> childCategories = emptyList();

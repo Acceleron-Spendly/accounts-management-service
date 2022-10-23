@@ -22,8 +22,8 @@ import static javax.persistence.InheritanceType.*;
 @ToString
 @Entity
 @Inheritance(strategy = TABLE_PER_CLASS)
+@NoArgsConstructor
 @AllArgsConstructor
-@RequiredArgsConstructor
 public abstract class AbstractEntity implements PrefixableId, Deletable {
 
     private static final String GENERATOR_NAME = "entity_seq";

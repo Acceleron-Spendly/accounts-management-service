@@ -7,9 +7,6 @@ package com.acceleron.spendly.accounts.persistence.dao;
  * All rights reserved.
  */
 
-
-import com.acceleron.spendly.accounts.persistence.dao.Identifiable;
-
 public interface PrefixableId extends Identifiable<String> {
 
     String DEFAULT_PREFIX_ID = "OBJ";
