@@ -25,7 +25,6 @@ public class RecordEntity extends AbstractEntity {
     public static final String TABLE_NAME = "record";
     private static final String ID_PREFIX = "RCD";
 
-    @Column(nullable = false)
     private BigDecimal targetAmount;
 
     @Column(nullable = false)

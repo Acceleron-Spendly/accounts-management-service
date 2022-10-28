@@ -1,8 +1,4 @@
 spring:
-  main:
-    banner-mode: off
-  application:
-    name: 'accounts-management-service'
   config:
     import: 'optional:configserver:http://localhost:8888'
   datasource:

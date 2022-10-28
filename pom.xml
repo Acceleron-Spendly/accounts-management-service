@@ -13,6 +13,10 @@
 	<version>0.0.2-SNAPSHOT</version>
 
 	<name>Spendly - Accounts management service</name>
+	<description>
+		A service designed to manipulate the data of user accounts and their types,
+		and to manipulate the accounts of an authorized user themselves
+	</description>
 
 	<packaging>pom</packaging>
 
@@ -82,9 +86,9 @@
 	</developers>
 
 	<scm>
-		<url>https://github.com/Acceleron-Inc/spendly-api</url>
-		<connection>git@github.com:Acceleron-Inc/spendly-api.git</connection>
-		<developerConnection>git@github.com:Acceleron-Inc/spendly-api.git</developerConnection>
+		<url>https://github.com/Acceleron-Spendly/accounts-management-service</url>
+		<connection>git@github.com:Acceleron-Spendly/accounts-management-service.git</connection>
+		<developerConnection>git@github.com:Acceleron-Spendly/accounts-management-service.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 </project>

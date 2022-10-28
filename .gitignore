@@ -4,6 +4,7 @@ database/*
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+core/src/main/resources/application-prod.yml
 
 ### STS ###
 .apt_generated
